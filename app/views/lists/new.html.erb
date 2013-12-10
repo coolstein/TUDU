@@ -1,0 +1,11 @@
+<h3>New</h3>
+<%= form_for @list do |f| %>
+  <%= f.label :task %>
+  <%= f.text_field :task %>
+
+  <%= f.label :priority %>
+  <%= f.select :priority, List::PRIORITY %>
+
+  <%= f.submit "Create TuDu" %>
+
+<% end %>

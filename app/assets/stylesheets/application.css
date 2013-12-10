@@ -1,0 +1,204 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+/* THE BASE + RESET */
+  html, body {
+    font-family: 'Open Sans', 'Helvetica', 'Arial', 'Sans-serif';
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: #f2f2f2;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+/* THE HEADER */
+  .main-header {
+    height: 50px;
+    width: 100%;
+    background-color: #6be0b9;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0px;
+    z-index: 999999;
+  }
+
+  .header-container {
+    padding: 10px 20px;
+  }
+
+  .main-header .logo h1{
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    text-transform: uppercase;
+    color: white;
+    float: left;
+  }
+
+  .create-container {
+    float: left;
+    padding-left: 20px;
+  }
+
+  .tudu-new-task-input{
+    height: 28px;
+    margin: 0;
+    padding: 0 10px;
+    border: 0;
+    font-family: inherit;
+    font-size: 16px;
+    outline: 0;
+  }  
+
+/* THE MAIN */
+  .main-container {
+    margin-top: 50px;
+    padding: 20px;
+  }
+
+/* THE TUDU LIST */
+  .tudu-list {
+    background-color: white;
+  }
+
+  .tudu-task-container {
+    float: left;
+    max-width: 90%;
+  }
+
+  .tudu-list li.tudu-list-task {
+    border-bottom: 1px solid #eee;
+    display: block;
+    padding: 20px;
+    background-color: white;
+  }
+
+  .tudu-list li.tudu-list-task:hover{
+    box-shadow: 3px 0px 0px #bbb inset;
+  }
+
+  .tudu-task-options {
+    overflow: hidden;
+    float: right;
+  }
+
+  .tudu-task-options li {
+    cursor: pointer;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #ddd;
+    line-height: 1;
+    float: left;
+  }
+
+  .tudu-task-options li:last-child{
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+
+  .tudu-list-task:hover .tudu-task{
+    color: black;
+  }
+
+  .tudu-task-options{
+    display: none;
+  }
+
+  .tudu-list-task:hover .tudu-task-options{
+    display: block;
+  }
+
+  .tudu-task-options li, .tudu-task-options li a{
+    font-size: 11px;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+  }
+
+  .tudu-task-options li a{
+    text-decoration: none;
+  }
+
+  .tudu-task-options li:hover, .tudu-task-options li a:hover{
+    color: #6be0b9;
+  }
+
+  .tudu-list li.tudu-list-task.edit-mode {
+    box-shadow: 3px 0px 0px #6be0b9 inset;
+    background-color: #f8ffef;
+  }
+
+  .edit-mode .tudu-task-container {
+    float: none;
+    max-width: 100%;
+  }
+
+  .edit-mode .tudu-task-options {
+    float: left;
+    display: block;
+  }
+
+  .tudu-edit-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 10px;
+    background: none;
+    font-weight: bold;
+    font-size: inherit;
+  }
+
+  .priority-high {
+    box-shadow: 3px 0px 0px orangered inset !important;
+  }
+
+/* THE TUDU LIST INTERACTION */
+  .tudu-list li.tudu-list-task.ui-sortable-helper {
+    cursor: move;
+    opacity: 0.75;
+  }
+
+  .tudu-list li.tudu-list-task.ui-sortable-placeholder {
+    background: #f8ffef !important;
+    visibility: visible !important;
+  }
+
